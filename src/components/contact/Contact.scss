@@ -1,0 +1,123 @@
+.contact{
+    margin-top: 135px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        background-color: #F6F6F6;
+        padding: 33px 110px 43px 97px;
+        border-radius: 22px;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    &__left--boxes{
+        max-width: 500px;
+    }
+    &__title{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.57px;
+        margin-bottom: 10px;
+    }
+    &__desc{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20.08px;  
+        color: #8B8E99;  
+        margin-bottom: 47px; 
+    }
+    &__search--card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 8px 9px;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+    &__search--card div{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 70%;
+    }
+    &__search--input{
+        flex-grow: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        color: #000;
+    }
+    &__search--btn{
+        padding: 10px 20px;
+        background-color: #3858D6;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px; 
+        color: white;
+    }
+    &__right--boxes__img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:1300px){
+    .contact{
+        &__wrapper{
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+        }
+    }
+}
+@media (max-width:1130px){
+    .contact{
+        &__wrapper{
+            padding: 33px 80px 43px 40px;
+        }
+    }
+}
+@media (max-width:660px){
+    .contact{
+        &__title{
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 6px;
+        }
+        &__desc{
+            font-size: 8px;
+            line-height: 12px;  
+            margin-bottom: 30px; 
+        }
+        &__search--card{
+            flex-direction: column;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            gap: 10px;
+
+        }
+        &__search--card div {
+            width: 100%;
+            padding: 8px 9px;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+        &__search--btn{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:345px){
+    .contact{
+        &__title{
+            font-size: 30px;
+            line-height:34px;
+            margin-bottom: 8px;
+        }
+        &__desc{
+            font-size: 6px;
+            line-height: 10px;  
+            margin-bottom: 20px; 
+        }
+    }
+}
