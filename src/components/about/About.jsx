@@ -4,7 +4,7 @@ import { aboutData } from '../../static'
 
 const About = () => {
     const card = aboutData?.map((user)=>(
-        <div className='about__card'>
+        <div className='about__card' key={user.id}>
             <div className='about__card-img'>
                 <img src={user.img} alt="about img"/>
             </div>

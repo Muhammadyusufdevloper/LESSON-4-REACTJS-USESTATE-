@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Product.scss"
 import { productData } from '../../static'
+import Modal from '../modal/Modal'
 
 const Product = () => {
+    const [prodact,setProdact] = useState(null)
+
+
     const product = productData?.map((product)=>(
         <div className='product__card' key={product.id}>
-            <div className='product__card-img'>
+            <div onClick={()=> setProdact(product)} className='product__card-img'>
                 <img src={product.img} alt="" />
             </div>
             <div className='product__card-info'>
@@ -13,7 +17,7 @@ const Product = () => {
                 <img src={product.start} alt="star img" />
                 <div className='product__card-info__part'>
                     <p className='product__card-info__old-price'>{product.oldPrice}</p>
-                    <p className='product__card-info__new-price'>${product.newPrice}</p>
+                    <p className='product__card-info__new-price'>{product.newPrice}</p>
                 </div>
             </div>
         </div>
@@ -30,6 +34,7 @@ const Product = () => {
             <button className='product__btn'>View More</button>
         </div>
     </section>
+    {prodact ? <Modal data={prodact} close={setProdact} /> : <></>}
     </>
   )
 }
